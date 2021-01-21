@@ -1,2 +1,8 @@
 class Bird < ApplicationRecord
-end
+
+def index
+    @birds = Bird.all
+    render json: {birds: @birds, messages:
+    ['Hello Birds', 'Goodbye Birds']}
+    end
+end 
